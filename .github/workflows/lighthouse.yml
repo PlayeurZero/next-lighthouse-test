@@ -1,0 +1,15 @@
+name: "Lighthouse"
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+      name: Run Lighthouse
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/setup-node@v1
+          with:
+          registry-url: 'https://npm.pkg.github.com'
+        - name: Start server
+          run: "node server.js"
