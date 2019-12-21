@@ -10,6 +10,6 @@ jobs:
       steps:
         - uses: actions/setup-node@v1
           with:
-          registry-url: 'https://npm.pkg.github.com'
+          registry-url: https://npm.pkg.github.com
         - name: Start server
           run: "node server.js"
