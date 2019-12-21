@@ -12,4 +12,4 @@ jobs:
           with:
             node-version: 10.x
         - name: Start server
-          run: "node server.js"
+          run: "npm run serve"

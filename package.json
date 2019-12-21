@@ -4,7 +4,7 @@
   "repository": "git@github.com:PlayeurZero/next-lighthouse-test.git",
   "author": "MATHIEU Nicolas <n.mathieu@splitfire.fr>",
   "scripts": {
-    "gha": "gha -f '.github/workflows/lighthouse.yml'"
+    "serve": "node server.js"
   },
   "devDependencies": {
     "@types/node": "^12.12.21"
