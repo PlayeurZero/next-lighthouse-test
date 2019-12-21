@@ -1,0 +1,21 @@
+name: "Lighthouse"
+env:
+  LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+jobs:
+  audit:
+    name: Init
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+      - name: Run Lighthouse
+        run: |
+          npm install -g @lhci/cli@0.3.x
+          lhci autorun || echo "LHCI failed!"

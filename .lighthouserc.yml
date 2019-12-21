@@ -1,0 +1,9 @@
+ci:
+  collect:
+    numberOfRuns: 1
+    startServerCommand: sudo npm run serve
+    url:
+      - http://localhost:80/
+      - http://localhost:80/pricing
+  upload:
+    target: temporary-public-storage
