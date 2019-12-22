@@ -1,7 +1,7 @@
 ci:
   collect:
     numberOfRuns: 5
-    startServerCommand: rails server -e production
+    startServerCommand: node server.js
     url:
       - http://localhost:3000/
       - http://localhost:3000/pricing
