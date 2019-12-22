@@ -1,4 +1,6 @@
 name: "Lighthouse"
+env:
+  LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
 on:
   push:
     branches:
@@ -16,4 +18,4 @@ jobs:
       - name: Run Lighthouse
         run: |
           npm install -g @lhci/cli@0.3.x
-          LHCI_GITHUB_TOKEN=${{ secrets.LHCI_GITHUB_TOKEN }} lhci autorun || echo "LHCI failed!"
+          lhci autorun || echo "LHCI failed!"
