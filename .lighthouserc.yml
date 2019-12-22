@@ -6,4 +6,4 @@ ci:
       - http://localhost:80/
       - http://localhost:80/pricing
   upload:
-    target: lhci
+    target: temporary-public-storage
