@@ -3,8 +3,7 @@ ci:
     numberOfRuns: 1
     startServerCommand: node server.js
     url:
-      - http://localhost:3000/
-      - http://localhost:3000/pricing
-      - http://localhost:3000/support
+      - http://localhost:80/
+      - http://localhost:80/pricing
   upload:
     target: lhci
