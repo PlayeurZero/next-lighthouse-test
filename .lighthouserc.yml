@@ -1,0 +1,10 @@
+ci:
+  collect:
+    numberOfRuns: 5
+    startServerCommand: rails server -e production
+    url:
+      - http://localhost:3000/
+      - http://localhost:3000/pricing
+      - http://localhost:3000/support
+  upload:
+    target: lhci

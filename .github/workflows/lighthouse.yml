@@ -5,12 +5,22 @@ on:
       - master
 jobs:
   build:
-      name: Run Lighthouse
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v1
-        - uses: actions/setup-node@v1
-          with:
-            node-version: 10.x
-        - name: Start server
-          run: "sudo npm run serve"
+    name: Run Server
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+      - name: Start server
+        run: "sudo npm run serve"
+  audit:
+    name: Init
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+      - name: Run Lighthouse
+        run: |
+          npm install -g @lhci/cli@0.3.x
+          lhci autorun || echo "LHCI failed!"
