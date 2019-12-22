@@ -1,7 +1,7 @@
 ci:
   collect:
     numberOfRuns: 1
-    startServerCommand: node server.js
+    startServerCommand: sudo npm run serve
     url:
       - http://localhost:80/
       - http://localhost:80/pricing
