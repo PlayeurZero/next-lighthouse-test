@@ -1,6 +1,6 @@
 ci:
   collect:
-    numberOfRuns: 5
+    numberOfRuns: 1
     startServerCommand: node server.js
     url:
       - http://localhost:3000/
