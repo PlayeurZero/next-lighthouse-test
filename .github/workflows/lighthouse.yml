@@ -18,4 +18,4 @@ jobs:
       - name: Run Lighthouse
         run: |
           npm install -g @lhci/cli@0.3.x
-          lhci autorun || echo "LHCI failed!"
+          lhci autorun --upload.serverBaseUrl="https://ancient-hollows-34191.herokuapp.com/app/projects" --upload.token="${{ secrets.LHCI_TOKEN }}" || echo "LHCI failed!"
