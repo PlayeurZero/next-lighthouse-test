@@ -1,6 +1,7 @@
 name: "Lighthouse"
 env:
   LHCI_GITHUB_TOKEN: ${{ secrets.LHCI_GITHUB_TOKEN }}
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
 on:
   push:
     branches:
@@ -18,4 +19,8 @@ jobs:
       - name: Run Lighthouse
         run: |
           npm install -g @lhci/cli@0.3.x
+          npm install
           lhci autorun --upload.serverBaseUrl="https://ancient-hollows-34191.herokuapp.com/app/projects" --upload.token="${{ secrets.LHCI_TOKEN }}" || echo "LHCI failed!"
+      - name: Make comment to Github PR
+        run: |
+          npm run create_pull_request_comment
