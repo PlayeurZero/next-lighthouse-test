@@ -5,5 +5,3 @@ ci:
     url:
       - http://localhost:80/
       - http://localhost:80/pricing
-  upload:
-    target: temporary-public-storage

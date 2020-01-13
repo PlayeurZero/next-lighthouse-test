@@ -4,9 +4,11 @@
   "repository": "git@github.com:PlayeurZero/next-lighthouse-test.git",
   "author": "MATHIEU Nicolas <n.mathieu@splitfire.fr>",
   "scripts": {
-    "serve": "node server.js"
+    "serve": "node server.js",
+    "create_pull_request_comment": "node createPullRequestComment.js"
   },
   "devDependencies": {
+    "@octokit/rest": "^16.36.0",
     "@types/node": "^12.12.21"
   }
 }
